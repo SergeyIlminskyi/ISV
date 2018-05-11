@@ -4,7 +4,7 @@ using System.ServiceModel;
 namespace ISV.Services.Contracts
 {
     [ServiceContract]
-    public interface IFrontEnd
+    public partial interface IFrontEnd
     {
         [OperationContract]
         void Test();
