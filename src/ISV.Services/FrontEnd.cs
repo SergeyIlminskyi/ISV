@@ -1,12 +1,6 @@
-﻿using ISV.Services.Contracts;
+﻿using ISV.Services.Contracts.FrontEnd;
 
 namespace ISV.Services
 {
-    class FrontEnd : IFrontEnd
-    {
-        public void Test()
-        {
-
-        }
-    }
+    public partial class FrontEnd : IFrontEnd { }
 }

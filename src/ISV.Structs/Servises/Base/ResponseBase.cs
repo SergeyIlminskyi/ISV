@@ -6,10 +6,22 @@ namespace ISV.Structs.Services
     [DataContract]
     public class ResponseBase
     {
+        public ResponseBase()
+        {
+            Code = FaultCodes.Success;
+        }
         [DataMember]
-        public string ResponseCode { get; set; }
+        public string Code { get; set; }
 
         [DataMember]
-        public string ResponseText { get; set; }
+        public string Message { get; set; }
+
+        public bool IsSuccess
+        {
+            get
+            {
+                return String.IsNullOrEmpty(Code) || Code == FaultCodes.Success;
+            }
+        }
     }
 }

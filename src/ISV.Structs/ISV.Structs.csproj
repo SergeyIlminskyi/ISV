@@ -41,12 +41,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FaultCodes\FaultCodes.cs" />
+    <Compile Include="FaultCodes\FaultCodes.Provider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Servises\Base\RequestBase.cs" />
     <Compile Include="Servises\Base\ResponseBase.cs" />
+    <Compile Include="ClientInfo.cs" />
+    <Compile Include="Servises\FrontEnd\Security\ConfirmEmailRecoveryPasswordRequest.cs" />
+    <Compile Include="Servises\FrontEnd\Security\ConfirmEmailRecoveryPasswordResponse.cs" />
+    <Compile Include="Servises\FrontEnd\Security\ConfirmEmailRegistrationRequest.cs" />
+    <Compile Include="Servises\FrontEnd\Security\ConfirmEmailRegistrationResponse.cs" />
+    <Compile Include="Servises\FrontEnd\Security\LogOffRequest.cs" />
+    <Compile Include="Servises\FrontEnd\Security\LogOffResponse.cs" />
+    <Compile Include="Servises\FrontEnd\Security\LogOnRequest.cs" />
+    <Compile Include="Servises\FrontEnd\Security\LogOnResponse.cs" />
+    <Compile Include="Servises\FrontEnd\Security\PrepareEmailRecoveryPasswordRequest.cs" />
+    <Compile Include="Servises\FrontEnd\Security\PrepareEmailRecoveryPasswordResponse.cs" />
+    <Compile Include="Servises\FrontEnd\Security\PrepareEmailRegistrationRequest.cs" />
+    <Compile Include="Servises\FrontEnd\Security\PrepareEmailRegistrationResponse.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Servises\Client\" />
+    <Folder Include="Servises\FrontEnd\Client\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

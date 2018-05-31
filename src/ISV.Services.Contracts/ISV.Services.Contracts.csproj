@@ -41,8 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IFrontEnd.Client.cs" />
-    <Compile Include="IFrontEnd.cs" />
+    <Compile Include="FrontEnd\IFrontEnd.Client.cs" />
+    <Compile Include="FrontEnd\IFrontEnd.cs" />
+    <Compile Include="FrontEnd\IFrontEnd.Security.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

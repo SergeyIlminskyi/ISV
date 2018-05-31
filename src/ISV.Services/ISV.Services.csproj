@@ -40,7 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrontEnd.Client.cs" />
     <Compile Include="FrontEnd.cs" />
+    <Compile Include="FrontEnd.Security.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
