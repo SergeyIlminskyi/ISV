@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISV.Services.Host.Test", "I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISV.Utils", "ISV.Utils\ISV.Utils.csproj", "{75C2750B-A0AE-447F-B194-C5F5A6B5F63F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISV.IntegrationAdapter", "ISV.IntegrationAdapter\ISV.IntegrationAdapter.csproj", "{CEC7350B-E657-4C1E-B356-0CD7DD92D8C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{75C2750B-A0AE-447F-B194-C5F5A6B5F63F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75C2750B-A0AE-447F-B194-C5F5A6B5F63F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75C2750B-A0AE-447F-B194-C5F5A6B5F63F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEC7350B-E657-4C1E-B356-0CD7DD92D8C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEC7350B-E657-4C1E-B356-0CD7DD92D8C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEC7350B-E657-4C1E-B356-0CD7DD92D8C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEC7350B-E657-4C1E-B356-0CD7DD92D8C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
