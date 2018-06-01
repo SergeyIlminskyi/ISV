@@ -51,9 +51,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ISV.Services.Contracts\ISV.Services.Contracts.csproj">
+      <Project>{6c9cc7c4-a64c-41c5-bed4-59eef1402af4}</Project>
+      <Name>ISV.Services.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ISV.Structs\ISV.Structs.csproj">
       <Project>{50b5439d-ddd4-4e23-a931-ad8d22849114}</Project>
       <Name>ISV.Structs</Name>

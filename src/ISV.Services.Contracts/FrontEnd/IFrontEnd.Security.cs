@@ -1,6 +1,6 @@
 ﻿using System;
 using System.ServiceModel;
-using ISV.Structs.Servises;
+using ISV.Structs.Services;
 
 namespace ISV.Services.Contracts.FrontEnd
 {

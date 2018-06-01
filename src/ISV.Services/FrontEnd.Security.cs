@@ -1,5 +1,5 @@
 ﻿
-using ISV.Structs.Servises;
+using ISV.Structs.Services;
 
 namespace ISV.Services
 {

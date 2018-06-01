@@ -3,7 +3,7 @@ using System.Collections.Concurrent;
 using System.Diagnostics;
 using System.ServiceModel;
 
-namespace Pentegy.Utils.Common
+namespace ISV.Utils
 {
     public static class WCFHelper
     {

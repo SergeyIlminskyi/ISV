@@ -1,10 +1,10 @@
 ﻿using System.Runtime.Serialization;
 using ISV.Structs.Services;
 
-namespace ISV.Structs.Servises
+namespace ISV.Structs.Services
 {
     [DataContract]
-    public class PrepareEmailRegistrationResponse : ResponseBase
+    public class LogOffRequest : RequestBase
     {
     }
 }
