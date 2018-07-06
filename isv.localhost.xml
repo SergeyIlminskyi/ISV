@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<appcmd>
+	<SITE SITE.NAME="isv.localhost" bindings="http/*:80:isv.localhost,net.tcp/3000:*" state="Started">
+		<site name="isv.localhost" serverAutoStart="true">
+			<bindings>
+				<binding protocol="http" bindingInformation="*:80:isv.localhost" />
+				<binding protocol="net.tcp" bindingInformation="3000:*" />
+			</bindings>
+			<limits />
+			<logFile />
+			<traceFailedRequestsLogging />
+			<applicationDefaults />
+			<virtualDirectoryDefaults />
+			<application applicationPool="DefaultAppPool" path="/" enabledProtocols="http">
+				<virtualDirectoryDefaults />
+				<virtualDirectory path="/" physicalPath="C:\inetpub\wwwroot" />
+			</application>
+			<application applicationPool="isv-backend" path="/backend" enabledProtocols="http,net.tcp">
+				<virtualDirectoryDefaults />
+				<virtualDirectory path="/" physicalPath="C:\inetpub\wwwroot" />
+			</application>
+		</site>
+	</SITE>
+</appcmd>
