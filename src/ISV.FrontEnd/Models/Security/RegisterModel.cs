@@ -9,7 +9,8 @@ namespace ISV.FrontEnd.Models
     public class RegisterModel
     {
         [Required]
-        public string EMail { get; set; }
+        [RegularExpression(@"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$", ErrorMessage = " Incorrect Email format. Correct: example@mail.com")]
+        public string Email { get; set; }
 
         [Required]
         public string PhoneNumber { get; set; }
@@ -20,7 +21,7 @@ namespace ISV.FrontEnd.Models
 
         [Required]
         [DataType(DataType.Password)]
-        [Compare("Password", ErrorMessage = "Пароли не совпадают")]
+        [Compare("Password", ErrorMessage = "Passwords mismatch")]
         public string ConfirmPassword { get; set; }
     }
 }

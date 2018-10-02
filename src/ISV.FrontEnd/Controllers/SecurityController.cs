@@ -59,7 +59,7 @@ namespace ISV.FrontEnd.Controllers
 
                 if (true)
                 {
-                    FormsAuthentication.SetAuthCookie(model.EMail, true);
+                    FormsAuthentication.SetAuthCookie(model.Email, true);
                     return RedirectToAction("Index", "Home");
                 }
                 else

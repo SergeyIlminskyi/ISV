@@ -1,4 +1,5 @@
-﻿
+﻿@model ISV.FrontEnd.Models.RegisterModel
+
 @{
     Layout = "~/Views/Shared/_LoginLayout.cshtml";
 }
@@ -17,26 +18,32 @@
                 </div>
             </div>
             <div class="form-bottom">
-                <form role="form" action="" method="post" class="registration-form">
+                @using (Html.BeginForm("Register", "Security", FormMethod.Post, new { @class = "registration-form" }))
+                {
+                    @Html.AntiForgeryToken()
+
                     <div class="form-group">
-                        <label class="sr-only" for="form-first-name">First name</label>
-                        <input type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="form-first-name">
+                        @Html.LabelFor(model => model.PhoneNumber, new { @class = "sr-only" })
+                        @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-username form-control", @placeholder = "Phone number...", @autocomplete = "off" })
+                        @Html.ValidationMessageFor(model => model.PhoneNumber)
                     </div>
                     <div class="form-group">
-                        <label class="sr-only" for="form-last-name">Last name</label>
-                        <input type="text" name="form-last-name" placeholder="Last name..." class="form-last-name form-control" id="form-last-name">
+                        @Html.LabelFor(model => model.Email, new { @class = "sr-only" })
+                        @Html.TextBoxFor(model => model.Email, new { @class = "form-username form-control", @placeholder = "Email...", @autocomplete = "off" })
+                        @Html.ValidationMessageFor(model => model.Email)
                     </div>
                     <div class="form-group">
-                        <label class="sr-only" for="form-email">Email</label>
-                        <input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
+                        @Html.LabelFor(model => model.Password, new { @class = "sr-only" })
+                        @Html.PasswordFor(model => model.Password, new { @class = "form-username form-control", @placeholder = "Password...", @autocomplete = "off" })
+                        @Html.ValidationMessageFor(model => model.Password)
                     </div>
                     <div class="form-group">
-                        <label class="sr-only" for="form-about-yourself">About yourself</label>
-                        <textarea name="form-about-yourself" placeholder="About yourself..."
-                                  class="form-about-yourself form-control" id="form-about-yourself"></textarea>
+                        @Html.LabelFor(model => model.ConfirmPassword, new { @class = "sr-only" })
+                        @Html.PasswordFor(model => model.ConfirmPassword, new { @class = "form-username form-control", @placeholder = "Confirm password...", @autocomplete = "off" })
+                        @Html.ValidationMessageFor(model => model.ConfirmPassword)
                     </div>
                     <button type="submit" class="btn">Sign me up!</button>
-                </form>
+                }
             </div>
         </div>
 
