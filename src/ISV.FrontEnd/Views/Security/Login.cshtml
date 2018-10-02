@@ -2,101 +2,53 @@
 
 @{
     ViewBag.Title = "To-do list and task manager";
-    Layout = null;
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
 }
 
-<head>
-    <title>@ViewBag.Title</title>
-    @Styles.Render("~/assets/loginStyles")
-
-    <link rel="shortcut icon" href="~/assets/ico/favicon.png">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="~/assets/ico/apple-touch-icon-57-precomposed.png">
-</head>
-<body background="~/assets/img/backgrounds/1.jpg">
-    <!-- Top content -->
-    <div class="top-content">
-        <div class="inner-bg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2 text">
-                        <h1>@ViewBag.Title</h1>
-                        <div class="description">
-                            <p>
-                                This is a free responsive <strong>"login and register forms"</strong> template made with Bootstrap.
-                                Download it on <a href="http://azmind.com" target="_blank"><strong>AZMIND</strong></a>,
-                                customize and use it as you like!
-                            </p>
-                        </div>
-                    </div>
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+        <div class="form-box">
+            <div class="form-top">
+                <div class="form-top-left">
+                    <h3>Login to our site</h3>
+                    <p>Enter username and password to log on:</p>
                 </div>
-                <div class="row">
-                    <div class="col-sm-6 col-sm-offset-3">
-                        <div class="form-box">
-                            <div class="form-top">
-                                <div class="form-top-left">
-                                    <h3>Login to our site</h3>
-                                    <p>Enter username and password to log on:</p>
-                                </div>
-                                <div class="form-top-right">
-                                    <i class="fa fa-lock"></i>
-                                </div>
-                            </div>
-                            <div class="form-bottom">
-                                @using (Html.BeginForm("Login", "Security", FormMethod.Post, new { @class = "login-form" }))
-                                {
-                                    @Html.AntiForgeryToken()
-                                    <div class="form-group">
-                                        @Html.LabelFor(model => model.Login, new { @class = "sr-only" })
-                                        @Html.TextBoxFor(model => model.Login, new { @class = "form-username form-control", @placeholder = "Username...", @autocomplete = "off" })
-                                        @Html.ValidationMessageFor(model => model.Login)
-                                    </div>
-                                    <div class="form-group">
-                                        @Html.LabelFor(model => model.Password, new { @class = "sr-only" })
-                                        @Html.PasswordFor(model => model.Password, new { @class = "form-username form-control", @placeholder = "Password...", @autocomplete = "off" })
-                                        @Html.ValidationMessageFor(model => model.Password)
-                                    </div>
-                                    <button type="submit" class="btn">Sign in!</button>
-                                }
-                            </div>
-                        </div>
-                        <div class="social-login">
-                            <h3>...or login with:</h3>
-                            <div class="social-login-buttons">
-                                <a class="btn btn-link-2" href="#">
-                                    <i class="fa fa-facebook"></i> Facebook
-                                </a>
-                                <a class="btn btn-link-2" href="#">
-                                    <i class="fa fa-twitter"></i> Twitter
-                                </a>
-                                <a class="btn btn-link-2" href="#">
-                                    <i class="fa fa-google-plus"></i> Google Plus
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="form-top-right">
+                    <i class="fa fa-lock"></i>
                 </div>
+            </div>
+            <div class="form-bottom">
+                @using (Html.BeginForm("Login", "Security", FormMethod.Post, new { @class = "login-form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Login, new { @class = "sr-only" })
+                        @Html.TextBoxFor(model => model.Login, new { @class = "form-username form-control", @placeholder = "Username...", @autocomplete = "off" })
+                        @Html.ValidationMessageFor(model => model.Login)
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Password, new { @class = "sr-only" })
+                        @Html.PasswordFor(model => model.Password, new { @class = "form-username form-control", @placeholder = "Password...", @autocomplete = "off" })
+                        @Html.ValidationMessageFor(model => model.Password)
+                    </div>
+                    <button type="submit" class="btn">Sign in!</button>
+                }
+            </div>
+        </div>
+        <div class="social-login">
+            <h3>...or login with:</h3>
+            <div class="social-login-buttons">
+                <a class="btn btn-link-2" href="#">
+                    <i class="fa fa-facebook"></i> Facebook
+                </a>
+                <a class="btn btn-link-2" href="#">
+                    <i class="fa fa-twitter"></i> Twitter
+                </a>
+                <a class="btn btn-link-2" href="#">
+                    <i class="fa fa-google-plus"></i> Google Plus
+                </a>
             </div>
         </div>
     </div>
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-
-                <div class="col-sm-8 col-sm-offset-2">
-                    <div class="footer-border"></div>
-                    <p>
-                        Made by Anli Zaimi at <a href="http://azmind.com" target="_blank"><strong>AZMIND</strong></a>
-                        having a lot of fun. <i class="fa fa-smile-o"></i>
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </footer>
-    <!-- Javascript -->
-    @Scripts.Render("~/assets/loginScripts")
-</body>
+</div>
+            
