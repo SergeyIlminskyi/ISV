@@ -8,10 +8,10 @@ namespace ISV.FrontEnd.Models
 {
     public class LoginModel
     {
-        [Required]
+        [Required(ErrorMessage = "Required field")]
         public string Login { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Required field")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
     }
