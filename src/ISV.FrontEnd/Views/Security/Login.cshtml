@@ -30,9 +30,14 @@
                         @Html.PasswordFor(model => model.Password, new { @class = "form-username form-control", @placeholder = "Password...", @autocomplete = "off" })
                         @Html.ValidationMessageFor(model => model.Password)
                     </div>
+                    <div class="form-bottom-right">
+                        <p>@Html.ActionLink("Forgot password?", "Register", "Security")</p>
+                    </div>
                     <button type="submit" class="btn">Sign in!</button>
                 }
-                <p>Enter username and password to log on:</p>
+                <div class="form-bottom-left">
+                    <p>Don`t have an account? @Html.ActionLink("Register now!", "Register", "Security")</p>
+                </div>
             </div>
         </div>
         <div class="social-login">

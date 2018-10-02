@@ -150,6 +150,16 @@ img { max-width: 100%; }
 	-moz-border-radius: 0 0 4px 4px; -webkit-border-radius: 0 0 4px 4px; border-radius: 0 0 4px 4px;
 	text-align: left;
 }
+.form-bottom-right {
+    margin-top: -10;
+    color: #fff;
+    text-align: right;
+    opacity: 0.8;
+}
+.form-bottom-left p { 
+    opacity: 0.8; 
+    color: #fff; 
+}
 
 .form-bottom form textarea {
 	height: 100px;
