@@ -209,6 +209,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Security\Login.cshtml" />
     <Content Include="Views\Shared\_LoginLayout.cshtml" />
+    <Content Include="Views\Security\Register.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
